@@ -31,15 +31,13 @@ public class Displayer {
                 case (1) -> {
                     int species;
                     String name;
-                    
+
                     System.out.println("choose a species");
                     System.out.println("0........Okapi");
-                    System.out.println("1........FlyingFrog");
-                    System.out.println("2........DemonSquid");
-                    System.out.println("3........Ostrich");
-                    System.out.println("4........Kiwi");
+                    System.out.println("1........Ostrich");
+                    System.out.println("2........Kiwi");
                     species = scanner.nextInt();
-                    
+
                     System.out.println("enter name (no spaces allowed)");
                     name = scanner.next();
                     scanner.nextLine();
@@ -50,29 +48,27 @@ public class Displayer {
                                 newAnimal = new Okapi(name);
                             }
                             case (1) -> {
-                                newAnimal = new FlyingFrog(name);
-                            }
-                            case (2) -> {
-                                newAnimal = new DemonSquid(name);
-                            }
-                            case (3) -> {
                                 newAnimal = new Ostrich(name);
                             }
-                            case (4) -> {
+                            case (2) -> {
                                 newAnimal = new Kiwi(name);
                             }
                         }
-                        registerAnimal(newAnimal);
+                        if (newAnimal != null) {
+                            registerAnimal(newAnimal);
+                        }
                     }
                 }
                 case (2) -> {
                     showAllAnimals();
                 }
                 case (3) -> {
-                    modifyAnimal();
+                    //...
+                    modifyAnimal(String oldName, Animal newAnimal);
                 }
                 case (4) -> {
-                    deleteAnimal();
+                    //...
+                    deleteAnimal(String oldName);
                 }
                 case (0) -> {
                     isQuitting = true;
@@ -84,6 +80,10 @@ public class Displayer {
         }
     }
 
+    private void registerAnimal(Animal newAnimal) {
+        this.animalManager.createOne(newAnimal);
+    }
+
     private void showAllAnimals() {
         List<Animal> displayed = this.animalManager.getAll();
         System.out.println("list of animals:");
@@ -92,7 +92,11 @@ public class Displayer {
         }
     }
 
-    private void registerPatient(Animal newAnimal) {
-        this.animalManager.createOne(newAnimal);
+    private void modifyAnimal(String oldName, Animal newAnimal) {
+
+    }
+
+    private void deleteAnimal(String oldName) {
+
     }
 }
