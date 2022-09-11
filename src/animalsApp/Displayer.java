@@ -4,6 +4,10 @@
  */
 package animalsApp;
 
+import animalsApp.animals.Kiwi;
+import animalsApp.animals.Okapi;
+import animalsApp.animals.Ostrich;
+import animalsApp.animals.Animal;
 import java.util.List;
 import java.util.Scanner;
 
