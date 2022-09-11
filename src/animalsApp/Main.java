@@ -4,8 +4,6 @@
  */
 package animalsApp;
 
-import animalsApp.animals.Kiwi;
-
 /**
  *
  * @author aldrai
