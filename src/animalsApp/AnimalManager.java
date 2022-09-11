@@ -1,4 +1,4 @@
-package animals;
+package animalsApp;
 
 import java.util.ArrayList;
 import java.util.Collections;
