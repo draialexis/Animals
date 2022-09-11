@@ -63,8 +63,7 @@ public class CLI {
                             registerAnimal(newAnimal);
                         }
                     } catch (Exception e) {
-                        System.out.println(e + " " + e.getMessage());
-                        showMenu();
+                        warnAndSendBack(e);
                         return;
                     }
                 }
@@ -86,8 +85,7 @@ public class CLI {
                                 requestLine("choose new name")
                         );
                     } catch (Exception e) {
-                        System.out.println(e + " " + e.getMessage());
-                        showMenu();
+                        warnAndSendBack(e);
                         return;
                     }
                 }
@@ -101,8 +99,7 @@ public class CLI {
                                         requestLine("choose a number for which animal to delete"))
                                 ));
                     } catch (Exception e) {
-                        System.out.println(e + " " + e.getMessage());
-                        showMenu();
+                        warnAndSendBack(e);
                         return;
                     }
                 }
@@ -144,5 +141,10 @@ public class CLI {
         System.out.println(msg);
         input = scanner.nextLine();
         return input;
+    }
+
+    private void warnAndSendBack(Exception e) {
+        System.out.println(e + " " + e.getMessage());
+        showMenu();
     }
 }
