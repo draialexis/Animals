@@ -32,8 +32,10 @@ public abstract class Animal {
         }
     }
 
-    public abstract void pose();
-    
+    public void pose() {
+        System.out.println("\t" + this.getName() + " is posing abstractly (pose() not redefined?)");
+    }
+
     @Override
     public String toString() {
         return this.getName() + " the " + this.getClass().getSimpleName();

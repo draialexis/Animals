@@ -11,7 +11,7 @@ package animalsApp.animals;
 public abstract class Bird extends Animal {
 
     private final int numberOfWings = 2;
-    
+
     protected Bird(String name) {
         super(name);
     }
@@ -19,11 +19,9 @@ public abstract class Bird extends Animal {
     public int getNumberOfWings() {
         return numberOfWings;
     }
-    
+
     @Override
     public String toString() {
         return this.getName() + " the " + this.getClass().getSimpleName() + ", owns " + this.getNumberOfWings() + " wings";
-    }
-    
-    
+    }   
 }
