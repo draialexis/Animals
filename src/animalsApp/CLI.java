@@ -37,9 +37,9 @@ public class CLI {
                     if (name != null) {
                         Animal newAnimal = null;
                         switch (requestLine("choose a species"
-                        + "\n0........Okapi"
-                        + "\n1........Ostrich"
-                        + "\n2........Kiwi")) {
+                                + "\n0........Okapi"
+                                + "\n1........Ostrich"
+                                + "\n2........Kiwi")) {
                             case ("0") -> {
                                 newAnimal = new Okapi(name);
                             }
@@ -54,7 +54,7 @@ public class CLI {
                                 break;
                             }
                         }
-                        if(newAnimal == null) { // should never be reached
+                        if (newAnimal == null) { // should never be reached
                             break;              // should never be reached
                         }                       // should never be reached
                         registerAnimal(newAnimal);
@@ -100,7 +100,7 @@ public class CLI {
     private void deleteAnimal(String oldName) {
 
     }
-    
+
     private String requestLine(String msg) {
         String input;
         System.out.println(msg);

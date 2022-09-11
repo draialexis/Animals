@@ -9,7 +9,8 @@ package animalsApp.animals;
  * @author aldrai
  */
 public class Ostrich extends Bird {
-    public Ostrich(String name){
+
+    public Ostrich(String name) {
         super(name);
     }
 }

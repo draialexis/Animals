@@ -9,7 +9,8 @@ package animalsApp.animals;
  * @author aldrai
  */
 public class Kiwi extends Bird {
-    public Kiwi(String name){
+
+    public Kiwi(String name) {
         super(name);
     }
 }

@@ -9,28 +9,25 @@ package animalsApp.animals;
  * @author aldrai
  */
 public abstract class Animal {
+
     private String name;
-    
-    protected Animal(){
-        this.name = null;
-    }
-    
-    protected Animal(String name){
+
+    protected Animal(String name) {
         validateName(name);
         this.name = name;
     }
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    public void setName(String name){
-        validateName(name);        
+
+    public void setName(String name) {
+        validateName(name);
         this.name = name;
     }
-    
+
     private void validateName(String name) {
-        if(name == null || name.isBlank()){
+        if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("!!>> name cannot be null or blank");
         }
     }

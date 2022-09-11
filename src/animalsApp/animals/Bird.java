@@ -9,7 +9,8 @@ package animalsApp.animals;
  * @author aldrai
  */
 public abstract class Bird extends Animal {
-    protected Bird(String name){
+
+    protected Bird(String name) {
         super(name);
     }
 }

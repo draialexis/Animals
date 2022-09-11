@@ -9,12 +9,12 @@ package animalsApp.animals;
  * @author aldrai
  */
 public class Okapi extends Animal {
-    
-    public Okapi(String name){
+
+    public Okapi(String name) {
         super(name);
     }
-    
-    public void pose(){
+
+    public void pose() {
         System.out.println("Okapi is posing");
     }
 }
