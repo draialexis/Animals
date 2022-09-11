@@ -14,7 +14,8 @@ public class Okapi extends Animal {
         super(name);
     }
 
+    @Override
     public void pose() {
-        System.out.println("Okapi is posing");
+        System.out.println("\t" + this.getName() + " is standing on four legs");
     }
 }

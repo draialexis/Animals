@@ -13,4 +13,14 @@ public class Kiwi extends Bird {
     public Kiwi(String name) {
         super(name);
     }
+
+    @Override
+    public void pose() {
+        System.out.println("\t" + this.getName() + " is being adorable");
+        fly();
+    }
+    
+    public void fly() {
+        System.out.println("\t" + this.getName() + " is flying around! (kiwis can fly, right?)");
+    }
 }

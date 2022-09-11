@@ -13,4 +13,9 @@ public class Ostrich extends Bird {
     public Ostrich(String name) {
         super(name);
     }
+    
+    @Override
+    public void pose() {
+        System.out.println("\t" + this.getName() + " is standing on two legs and flapping flightless wings");
+    }
 }

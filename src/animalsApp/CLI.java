@@ -126,6 +126,7 @@ public class CLI {
         int i = 0;
         for (Animal animal : displayed) {
             System.out.println(i + ": " + animal);
+            animal.pose();
             i++;
         }
     }

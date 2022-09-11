@@ -18,7 +18,7 @@ public abstract class Animal {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -32,8 +32,10 @@ public abstract class Animal {
         }
     }
 
+    public abstract void pose();
+    
     @Override
     public String toString() {
-        return name + " the " + this.getClass().getSimpleName();
+        return this.getName() + " the " + this.getClass().getSimpleName();
     }
 }
