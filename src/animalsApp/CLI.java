@@ -11,12 +11,12 @@ import animalsApp.animals.Animal;
 import java.util.List;
 import java.util.Scanner;
 
-public class Displayer {
+public class CLI {
 
     private final AnimalManager animalManager;
     private final Scanner scanner;
 
-    public Displayer() {
+    public CLI() {
         this.animalManager = new AnimalManager();
         this.scanner = new Scanner(System.in);
     }
