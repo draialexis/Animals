@@ -16,9 +16,9 @@ public class CLI {
     private final AnimalManager animalManager;
     private final Scanner scanner;
 
-    public CLI() {
-        this.animalManager = new AnimalManager();
-        this.scanner = new Scanner(System.in);
+    public CLI(AnimalManager animalManager, Scanner scanner) {
+        this.animalManager = animalManager;
+        this.scanner = scanner;
     }
 
     public void showMenu() {
