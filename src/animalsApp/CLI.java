@@ -62,7 +62,7 @@ public class CLI {
                             }                        // should never be reached
                             registerAnimal(newAnimal);
                         }
-                    } catch (Exception e) {
+                    } catch (IllegalArgumentException | IndexOutOfBoundsException e) {
                         warnAndSendBack(e);
                         return;
                     }
@@ -84,7 +84,7 @@ public class CLI {
                                         ),
                                 requestLine("choose new name")
                         );
-                    } catch (Exception e) {
+                    } catch (IllegalArgumentException | IndexOutOfBoundsException e) {
                         warnAndSendBack(e);
                         return;
                     }
@@ -98,7 +98,7 @@ public class CLI {
                                 .get(Integer.parseInt(
                                         requestLine("choose a number for which animal to delete"))
                                 ));
-                    } catch (Exception e) {
+                    } catch (IllegalArgumentException | IndexOutOfBoundsException e) {
                         warnAndSendBack(e);
                         return;
                     }
@@ -113,7 +113,7 @@ public class CLI {
         }
     }
 
-    private Animal registerAnimal(Animal newAnimal) {
+    private Animal registerAnimal(Animal newAnimal) throws IllegalArgumentException {
         return this.animalManager.addOne(newAnimal);
     }
 
@@ -128,11 +128,11 @@ public class CLI {
         }
     }
 
-    private Animal modifyAnimal(Animal oldAnimal, String newName) {
+    private Animal modifyAnimal(Animal oldAnimal, String newName) throws IllegalArgumentException {
         return this.animalManager.updateOne(oldAnimal, newName);
     }
 
-    private void deleteAnimal(Animal oldAnimal) {
+    private void deleteAnimal(Animal oldAnimal) throws IllegalArgumentException {
         this.animalManager.deleteOne(oldAnimal);
     }
 

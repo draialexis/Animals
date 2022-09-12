@@ -38,7 +38,7 @@ public class AnimalManager {
         }
     }
 
-    public Animal addOne(Animal newAnimal) {
+    public Animal addOne(Animal newAnimal) throws IllegalArgumentException {
         if (newAnimal == null) {
             throw new IllegalArgumentException(
                     "!!>> new Animal may not be null"
@@ -55,7 +55,7 @@ public class AnimalManager {
         return newAnimal;
     }
 
-    public Animal updateOne(Animal oldAnimal, String newName) {
+    public Animal updateOne(Animal oldAnimal, String newName) throws IllegalArgumentException {
         if (oldAnimal == null) {
             throw new IllegalArgumentException(
                     "!!>> oldAnimal may not be null"
@@ -72,7 +72,7 @@ public class AnimalManager {
         return oldAnimal;
     }
 
-    public void deleteOne(Animal oldAnimal) {
+    public void deleteOne(Animal oldAnimal) throws IllegalArgumentException {
         if (oldAnimal == null) {
             throw new IllegalArgumentException(
                     "!!>> oldAnimal may not be null"

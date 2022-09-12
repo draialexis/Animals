@@ -12,7 +12,7 @@ public abstract class Animal {
 
     private String name;
 
-    protected Animal(String name) {
+    protected Animal(String name) throws IllegalArgumentException {
         validateName(name);
         this.name = name;
     }
@@ -21,12 +21,12 @@ public abstract class Animal {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) throws IllegalArgumentException {
         validateName(name);
         this.name = name;
     }
 
-    private void validateName(String name) {
+    private void validateName(String name) throws IllegalArgumentException {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("!!>> name cannot be null or blank");
         }
